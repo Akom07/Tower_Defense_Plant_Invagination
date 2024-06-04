@@ -106,7 +106,7 @@ class Enemy extends Sprite {
         const xDistance = waypoint.x - this.center.x
         const angle = Math.atan2(yDistance, xDistance)
         //enemy speed = mult *3
-        const speed = 0.5
+        const speed = 2
 
         this.velocity.x = Math.cos(angle) * speed
         this.velocity.y = Math.sin(angle) * speed
@@ -149,8 +149,8 @@ class Projectile extends Sprite {
             this.enemy.center.y - this.position.y,
             this.enemy.center.x - this.position.x)
 
-        this.velocity.x = Math.cos(angle) * 2
-        this.velocity.y = Math.sin(angle) * 2
+        this.velocity.x = Math.cos(angle) * 5
+        this.velocity.y = Math.sin(angle) * 5
 
         this.position.x += this.velocity.x
         this.position.y += this.velocity.y
@@ -199,7 +199,7 @@ class Building extends Sprite {
     // }
     update() {
         this.draw()
-        if (this.fireRate % 200 === 0 && this.target) {
+        if (this.fireRate % 75 === 0 && this.target) {
             this.projectiles.push(
                 new Projectile({
                     position: {
