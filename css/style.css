@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    font-family: "Space Grotesk";
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  #gameContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    max-height: 768px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #gameContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  #gameOver {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5em;
+    font-weight: 700;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .resource {
+    background-color: rgba(50, 50, 50, 0.5);
+    padding: 5px 10px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  #hearts,
+  #coins {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 500;
+    -webkit-text-stroke: 1px white;
+    gap: 10px;
+  }
