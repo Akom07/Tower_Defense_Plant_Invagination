@@ -52,6 +52,7 @@ const buildings = []
 let activeTile = undefined
 let hearts = 5
 let coins = 100
+let waves = 1
 
 function animate() {
     const animationId = requestAnimationFrame(animate)
@@ -75,7 +76,9 @@ function animate() {
     }
 
     if (enemies.length === 0) {
+        ++waves
         enemyCount += 3
+        document.querySelector('#wave').innerText = waves
         spawnEnemis(enemyCount)
     }
 
