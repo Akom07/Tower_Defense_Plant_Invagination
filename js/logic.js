@@ -35,12 +35,16 @@ image.onload = () => {
 image.src = './asset/map.png'
 
 const enemies = []
+let speed = 1.5
 
 function spawnEnemis(spawnCount) {
+    speed +=0.5
     for (let i = 1; i < spawnCount + 1; i++) {
         const xOffset = i * 150
         enemies.push(new Enemy({
-            position: { x: (waypoints[0].x - xOffset) - canvasWidth / 2 + centerX, y: waypoints[0].y - canvasHeight / 2 + centerY }
+            position: { x: (waypoints[0].x - xOffset) - canvasWidth / 2 + centerX, y: waypoints[0].y - canvasHeight / 2 + centerY },
+            speed
+        
         }))
     }
 }
